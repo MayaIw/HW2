@@ -78,7 +78,8 @@ def main():
     file = pd.merge(file1, file2,on=0)
     file.sort_values(ascending=True)
     elements = file.to_numpy()
-
+    print(elements)
+    
     for line in file:
         point = [float(n) for n in line.split(',') if is_float(n)]
         elements.append(point)
